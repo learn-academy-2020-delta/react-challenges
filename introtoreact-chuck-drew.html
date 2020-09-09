@@ -20,6 +20,7 @@
                 <Header />
                 <h1>Hello React!</h1>
                 <Content />
+                <Footer />
             </div>
         )
       }
@@ -36,7 +37,7 @@
     class Content extends React.Component{
         render(){
             return(
-                <div>
+//                <div>
                     <ul>
                         <li>Drew</li>
                         <li>Joel</li>
@@ -49,7 +50,15 @@
                         <li>Nate</li>
                         <li>Ryan</li>
                     </ul>
-                </div>
+//                </div>
+            )
+        }
+    }
+
+    class Footer extends React.Component{
+        render(){
+            return(
+                <h2>Drew and Chuck</h2>
             )
         }
     }
