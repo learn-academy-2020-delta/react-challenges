@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <title>Intro to React</title>
+
+</head>
+<body>
+
+  <div id="react-container"></div>
+
+  <script type="text/babel">
+    class App extends React.Component{
+      render(){
+        return(
+            <div>
+                <Header />
+                <h1>Hello React!</h1>
+                <Content />
+            </div>
+        )
+      }
+    }
+
+    class Header extends React.Component{
+        render(){
+            return(
+                <h1>Delta Cohort</h1>
+            )
+        }
+    }
+
+    class Content extends React.Component{
+        render(){
+            return(
+                <div>
+                    <ul>
+                        <li>Drew</li>
+                        <li>Joel</li>
+                        <li>Chuck</li>
+                        <li>Diem</li>
+                        <li>Bach</li>
+                        <li>Brian</li>
+                        <li>Matt</li>
+                        <li>David</li>
+                        <li>Nate</li>
+                        <li>Ryan</li>
+                    </ul>
+                </div>
+            )
+        }
+    }
+    const domContainer = document.querySelector('#react-container')
+    ReactDOM.render(<App />, domContainer)
+  </script>
+</body>
+</html>
