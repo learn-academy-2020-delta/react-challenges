@@ -6,30 +6,31 @@ export default class App extends Component{
   constructor(props){
     super(props)
     this.state = {
-      renderQuestion: null 
+      colorBoxes: []
     }
   }
 
   addBox = () => {
-    let {renderQuestion} = this.state
-    this.setState({renderQuestion: true})
+    let { colorBoxes } = this.state
+    colorBoxes.push(<Colorbox />)
+    this.setState({colorBoxes: colorBoxes})
   }
 
   removeBox = () => {
-    let {renderQuestion} = this.state
-    this.setState({renderQuestion: false})
+    let { colorBoxes } = this.state
+    colorBoxes.pop(<Colorbox />)
+    this.setState({colorBoxes: colorBoxes})
   }
 
 
   render(){
-    let {renderQuestion} = this.state
+    let {colorBoxes} = this.state
+    console.log(colorBoxes)
     return (
       <div className="App">
-        <Colorbox />
-        {renderQuestion === true ? <Colorbox /> : null}
-        {renderQuestion === true ? <Colorbox /> : null}
-        {renderQuestion === true ? <Colorbox /> : null}
-        {renderQuestion === true ? <Colorbox /> : null}
+        <div>
+          { colorBoxes }
+        </div>
         <button onClick = {this.addBox}>Add</button>
         <button onClick = {this.removeBox}>Remove</button>
       </div>

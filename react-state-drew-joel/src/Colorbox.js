@@ -20,9 +20,10 @@ export default class Colorbox extends Component{
 
   render(){
       let { currentColor, bgroundColor } = this.state
+      let bckColor = {backgroundColor: bgroundColor}
     return (
       <div className="App">
-        <div className="colorBox" style={{backgroundColor: bgroundColor}}>
+        <div className="colorBox" style={bckColor}>
             <p onClick = {this.handleChange}>Choose a color: {currentColor}</p>
         </div>
       </div>
