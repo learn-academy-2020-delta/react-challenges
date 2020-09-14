@@ -1,0 +1,12 @@
+body {
+  background-color: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.colorBox {
+  background-color: white;
+  width: 300px;
+  display: flex;
+}
