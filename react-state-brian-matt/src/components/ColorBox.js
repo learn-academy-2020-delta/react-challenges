@@ -5,7 +5,6 @@ export default class ColorBox extends Component {
         super(props) 
         this.state = {
             colorOptions: ["green", "blue", "yellow", "red", "purple", "orange"],
-            visibilityState: "",
             colorText: "",
             backgroundColor: "white"
         }
