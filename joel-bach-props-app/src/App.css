@@ -1,4 +1,29 @@
+
 .dice-cube {
     padding: "50px 50px";
     color: "black";
+    
+}
+
+.heading {
+    margin: auto;
+    width: 50%;
+    align-self: center;
+}
+
+.content {
+    margin: auto;
+    width: 50%;
+  /* border: 3px solid green; */
+    padding: 10px;
+}
+
+.cube {
+    font-size: 100px;
+    align-content: center;
+    width: 50%;
+    border: 3px solid black;
+    padding: 50px;
+    height: 100px;
+    width: 100px;
 }

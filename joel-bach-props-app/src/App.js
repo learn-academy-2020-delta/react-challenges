@@ -7,8 +7,8 @@ class App extends Component{
   constructor(props) {
     super(props)
     this.state = {
-      diceNumber: [],
-      rollNumber: ""
+      logOfRollsThrown: [],
+      currentRandomizedNumber: ""
     }
   }
 
@@ -17,20 +17,22 @@ class App extends Component{
     let randomRoll = Math.floor(Math.random() * 6 + 1)
     console.log(randomRoll)
     // change the state object of rollNumber to equal the value of randomRoll
-    let joined = this.state.diceNumber.concat(randomRoll) 
+    let joined = this.state.logOfRollsThrown.concat(randomRoll) 
     console.log(joined)
-    this.setState({ rollNumber: randomRoll })
-    this.setState({ diceNumber: joined })
+    this.setState({ currentRandomizedNumber: randomRoll })
+    this.setState({ logOfRollsThrown: joined })
   }
 
   render() {
 
     return (
       <>
-      <Dice currentNumber = { this.state.rollNumber }/>
-      <Rolls historyOfNumRolled = { this.state.diceNumber } />
+      <div className = "content">
+      <Dice currentNumber = { this.state.currentRandomizedNumber }/>
+      <Rolls historyOfNumRolled = { this.state.logOfRollsThrown } />
       {/* want to change text of button displayed to equal the random number*/}
       <button className = "dice-cube" onClick = { this.diceRoll }> ? </button>
+      </div>
       </>
     )
   }
