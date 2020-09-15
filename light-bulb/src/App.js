@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Bulb from '. /components/Bulb.js';
+import Bulb from './components/Bulb.js';
 import './App.css'
 
 class App extends Component {
@@ -8,7 +8,7 @@ class App extends Component {
 
     return (
       <div>
-
+        <Bulb />
       </div>
     );
   }
