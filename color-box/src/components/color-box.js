@@ -27,10 +27,11 @@ class ColorBox extends Component {
     return (
       <div>
         <h2 style={{ headerStyle }}>Ryan & Chuck's Color Box</h2>
-        <div id="whiteSquare" style={{background: this.state.currentColor}}></div>
-        <button onClick = {this.handleChange}> Click Me
+        <div id="whiteSquare" style={{background: this.state.currentColor}}>
+        {this.state.currentColor}
+          </div>
+          <button onClick = {this.handleChange}> Click Me
         </button>
-        <h3>{this.state.currentColor}</h3>
       </div>
     )
   }
