@@ -7,9 +7,12 @@ class Dice extends Component {
       <div>
           <div className="numberBox" onClick={this.props.roller}>
               <p>{this.props.number}</p>
+              
           </div>
           <h1>Click Box to Roll</h1>
+          <img className="dicePic" src={this.props.} />
       </div>
+      
     )
   }
 }
