@@ -6,10 +6,10 @@ class Fooditems extends Component{
     return (
       <div className="FoodList">
         <ul>
-            {menuList.map((item, index) => {
+            {this.props.menuList.map((item, index) => {
                 return(
                     <li key={index}>
-                        {item.fooditem}.....${item.price}
+                        {item.fooditem}...${item.price}
                     </li>
                 )
             })}
