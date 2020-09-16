@@ -8,7 +8,7 @@ class App extends Component{
     super(props)
     this.state = {
       menuList: [
-        {fooditem: "Chesseburger", price: 5.00},
+        {fooditem: "Cheeseburger", price: 5.00},
         {fooditem: "Pizza", price: 6.00},
         {fooditem: "Chicken Sandwich", price: 6.00},
         {fooditem: "Ribs", price: 9.00},
@@ -18,12 +18,21 @@ class App extends Component{
     }
   }
 
+  addItem = (currentItem) => {
+    const { cart } = this.state
+    this.setState({ cart: [...cart, currentItem]})
+  }
+
   render(){  
+    console.log(this.state.cart)
     return (
       <div className="App">
         <Fooditems 
           menuList={this.state.menuList}
-          menu1={this.state.menu1}
+          addItem={this.addItem}
+        />
+        <Cart 
+          cart={this.state.cart}
         />
       </div>
     );
