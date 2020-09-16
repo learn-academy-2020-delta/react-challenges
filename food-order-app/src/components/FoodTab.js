@@ -13,9 +13,9 @@ class FoodTab extends Component {
           })}
         </ul>
 
-        <h3>Subtotal = {`${this.props.totalBill}`}</h3>
-        <h4>Sales Tax = {this.props.totalBill * 0.08}</h4>
-        <h3>Total Bill = {this.props.totalBill * 1.08}</h3>
+        <h3>Subtotal = {`$${this.props.totalBill}`}</h3>
+        <h4>Sales Tax = ${(this.props.totalBill * 0.08).toFixed(2)}</h4>
+        <h3>Total Bill = ${(this.props.totalBill * 1.08).toFixed(2)}</h3>
       </>
     )
   }
