@@ -44,7 +44,6 @@ randomNumber = () => {
           <Rolls 
             rolls={this.state.rollHistory}
           />
-          <img src={Dice1}/>
         </div>
       </div>
     )
